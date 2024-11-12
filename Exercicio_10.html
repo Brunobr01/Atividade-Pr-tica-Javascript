@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10</title>
+</head>
+<body>
+    <h2>Verificar se o número é positivo, negativo ou zero</h2>
+    
+    <button onclick="verificarNumero()">Verificar Número</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function verificarNumero() {
+            // Captura a entrada do usuário
+            let numero = prompt("Digite um número:");
+
+            // Converte a entrada para um número
+            numero = parseFloat(numero);
+
+            // Verifica se a entrada é válida
+            if (isNaN(numero)) {
+                document.getElementById("resultado").innerHTML = "Por favor, insira um número válido.";
+            } else if (numero > 0) {
+                document.getElementById("resultado").innerHTML = "O número é positivo.";
+            } else if (numero < 0) {
+                document.getElementById("resultado").innerHTML = "O número é negativo.";
+            } else {
+                document.getElementById("resultado").innerHTML = "O número é zero.";
+            }
+        }
+    </script>
+</body>
+</html>
